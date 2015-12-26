@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css animation test</title>
+</head>
+<style>	
+#cloud1{
+	background:url("picture/cloud.png");
+	position: relative;
+	top:280px;
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	-webkit-animation-name:cloud1;
+	-webkit-animation-duration:4s;
+	animation-iteration-count:infinite;
+	animation-name:cloud1;
+	animation-duration:8s;
+	animation-timing-function:linear;
+}
+#cloud2{
+	background:url("picture/cloud.png");
+	position: relative;
+	top:280px;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	left:60%;
+	-webkit-animation-name:cloud2;
+	-webkit-animation-duration:10s;
+	animation-name:cloud2;
+	animation-duration:10s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+}
+#horizon{
+	position:relative;
+ 	top:350px;
+}
+/*#background{
+	position: relative;
+	height:280px;
+}*/
+#human{
+	background:url("picture/walkingman.gif");
+	background-size: cover;
+	width:100px;
+	height:100px;
+	position: relative;
+	top:280px;
+	left: 300px;
+	float:left;
+}
+@keyframes human{
+	from {left:0px;top:0px;}
+	to{left: 500px;top:30px;height: 200px;width: 200px;background:url("picture/move.png");background-size:cover; }
+}
+@keyframes cloud1{
+	0%{left:100%;}
+	100%{left:-10%;}
+}
+@-webkit-keyframes cloud1{
+	0%{left:80%;}
+	100%{left:-30%;}
+}
+@keyframes cloud2{
+	0%{left:100%;}
+	100%{left:-50%;}
+}
+@-webkit-keyframes cloud2{
+	0%{left:80%;}
+	10%{left:40%;}
+	30%{left:0%;display: none;}
+	70%{left:110%;}
+	100%{left:80%;}
+}
+</style>
+<body>
+	<div id ="cloud1"></div>
+	<div id ="cloud2"></div>
+	<div id = "human"></div>
+	<div id = "horizon">
+		<hr size = "5" color="black">	
+	</div>
+
+</body>
+</html>
